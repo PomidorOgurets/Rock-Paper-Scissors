@@ -31,17 +31,15 @@ function playRound (humanChoice, computerChoice) {
 }
 
 function playGame () {
-    for (let i = 0; i <= 4; i++) {
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
 
-        result = playRound(humanSelection, computerSelection)
-        console.log(result)
-        if (result[4] == 'L') {
-            computerScore++;
-        } else if (result[4] == 'W') {
-            humanScore++;
-        }
+    result = playRound(humanSelection, computerSelection)
+    console.log(result)
+    if (result[4] == 'L') {
+        computerScore++;
+    } else if (result[4] == 'W') {
+        humanScore++;
     }
     console.log('Human Score ',humanScore, ' : ', computerScore, ' Computer Score')
 }
